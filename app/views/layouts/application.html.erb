@@ -9,9 +9,17 @@
 <body>
 
   <%= render 'layouts/top_nav' %>
-
+      <% if current_user %>
+          <li> Signed in as <%= current_user.first_name %> |<%= link_to "Logout", '/logout' %></li>
+        <% else %>
+          <li>  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %></li>
+        <% end %>
+          
   <main class="container">
+
     <%= yield %>
+   
+    
   </main>
 
   <%= yield :end_of_body %>
