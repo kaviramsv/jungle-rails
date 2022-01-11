@@ -19,10 +19,10 @@ RSpec.feature "Visitor can navigate from home page to product page by clicking o
     # ACT
     visit root_path   
     click_link("Details", match: :first)
-    # DEBUG / VERIFY
+    # DEBUG / VERIFY   
+    expect(page).to have_css 'section.products-show',count:1
     save_screenshot
     puts page.html 
-    expect(page).to have_css 'section.products-show',count:1
   end
 
 end 
