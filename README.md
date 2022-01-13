@@ -1,6 +1,8 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 .Let users to add items to their cart,make payment with stripe card and purchase items
+A mini e-commerce application built with Rails 4.2 .Let users to add items to their cart,make payment with stripe card and purchase items.
+
+## Set up
 
 1. Run `bundle install` to install dependencies
 2. Create `config/database.yml` by copying `config/database.example.yml`
